@@ -1,0 +1,134 @@
+SQL> Select abcno, ename, sal, (sal/30) from abc;
+
+     ABCNO ENAME             SAL   (SAL/30)
+---------- ---------- ---------- ----------
+      7698 BLAKE            2850         95
+      7782 CLARK            2450 81.6666667
+      7566 JONES            2975 99.1666667
+      7788 SCOTT            3000        100
+      7902 FORD             3000        100
+      7369 SMITH             800 26.6666667
+      7499 ALLEN            1600 53.3333333
+      7521 WARD             1250 41.6666667
+      7654 MARTIN           1250 41.6666667
+      7844 TURNER           1500         50
+      7876 ADAMS            1100 36.6666667
+edit
+
+
+
+
+
+SQL> Select abcno, ename, sal, (sal*12) "ANNSAL" from abc;
+
+     ABCNO ENAME             SAL     ANNSAL
+---------- ---------- ---------- ----------
+      7698 BLAKE            2850      34200
+      7782 CLARK            2450      29400
+      7566 JONES            2975      35700
+      7788 SCOTT            3000      36000
+      7902 FORD             3000      36000
+      7369 SMITH             800       9600
+      7499 ALLEN            1600      19200
+      7521 WARD             1250      15000
+      7654 MARTIN           1250      15000
+      7844 TURNER           1500      18000
+      7876 ADAMS            1100      13200
+      
+      edit
+      
+      
+      
+      
+      
+      
+      SQL> Select abcno||'  '|| ename "abcloyee" from abc;
+
+abcloyee
+----------------------------------------------------
+7698  BLAKE
+7782  CLARK
+7566  JONES
+7788  SCOTT
+7902  FORD
+7369  SMITH
+7499  ALLEN
+7521  WARD
+7654  MARTIN
+7844  TURNER
+7876  ADAMS
+
+edit
+
+
+
+SQL> select ename|| '  ' ||job "Comp_Name" from abc;
+
+Comp_Name
+---------------------
+BLAKE  MANAGER
+CLARK  MANAGER
+JONES  MANAGER
+SCOTT  ANALYST
+FORD  ANALYST
+SMITH  CLERK
+ALLEN  SALESMAN
+WARD  SALESMAN
+MARTIN  SALESMAN
+TURNER  SALESMAN
+ADAMS  CLERK
+
+edit
+
+
+
+
+
+
+
+SQL> select ename||' is '|| job ||' and he is working in Dept No
+  2  '|| deptno ||' Since '||hiredate from abc;
+
+ENAME||'IS'||JOB||'ANDHEISWORKINGINDEPTNO'||DEPTNO||'SINCE'||HIREDATE
+--------------------------------------------------------------------------------
+BLAKE is MANAGER and he is working in Dept No
+30 Since 01-MAY-81
+
+CLARK is MANAGER and he is working in Dept No
+10 Since 09-JUN-81
+
+JONES is MANAGER and he is working in Dept No
+20 Since 02-APR-81
+
+SCOTT is ANALYST and he is working in Dept No
+20 Since 19-APR-87
+
+ENAME||'IS'||JOB||'ANDHEISWORKINGINDEPTNO'||DEPTNO||'SINCE'||HIREDATE
+--------------------------------------------------------------------------------
+
+FORD is ANALYST and he is working in Dept No
+20 Since 03-DEC-81
+
+SMITH is CLERK and he is working in Dept No
+20 Since 17-DEC-80
+
+ALLEN is SALESMAN and he is working in Dept No
+30 Since 20-FEB-81
+
+WARD is SALESMAN and he is working in Dept No
+
+ENAME||'IS'||JOB||'ANDHEISWORKINGINDEPTNO'||DEPTNO||'SINCE'||HIREDATE
+--------------------------------------------------------------------------------
+30 Since 22-FEB-81
+
+MARTIN is SALESMAN and he is working in Dept No
+30 Since 28-SEP-81
+
+TURNER is SALESMAN and he is working in Dept No
+30 Since 08-SEP-81
+
+ADAMS is CLERK and he is working in Dept No
+20 Since 23-MAY-87
+
+edit yourself
+                                                                                        
