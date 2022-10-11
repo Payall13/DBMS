@@ -1,0 +1,15 @@
+SQL> Select ename, mgr from abc;
+
+ENAME             MGR
+---------- ----------
+BLAKE            7839
+CLARK            7839
+JONES            7839
+SCOTT            7566
+FORD             7566
+SMITH            7902
+ALLEN            7698
+WARD             7698
+MARTIN           7698
+TURNER           7698
+ADAMS            7788
