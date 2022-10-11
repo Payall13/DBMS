@@ -1,0 +1,15 @@
+SQL> Select job, comm from abc;
+
+JOB             COMM
+--------- ----------
+MANAGER
+MANAGER
+MANAGER
+ANALYST
+ANALYST
+CLERK
+SALESMAN         300
+SALESMAN         500
+SALESMAN        1400
+SALESMAN           0
+CLERK
