@@ -1,0 +1,15 @@
+SQL> Select ename, deptno from abc;
+
+ENAME          DEPTNO
+---------- ----------
+BLAKE              30
+CLARK              10
+JONES              20
+SCOTT              20
+FORD               20
+SMITH              20
+ALLEN              30
+WARD               30
+MARTIN             30
+TURNER             30
+ADAMS              20
