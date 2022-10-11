@@ -1,0 +1,57 @@
+SQL> Select ename "Malay" from abc;
+
+Malay
+----------
+BLAKE
+CLARK
+JONES
+SCOTT
+FORD
+SMITH
+ALLEN
+WARD
+MARTIN
+TURNER
+ADAMS
+
+
+
+
+
+SQL> Select sal "SALARIES" from abc;
+
+  SALARIES
+----------
+      2850
+      2450
+      2975
+      3000
+      3000
+       800
+      1600
+      1250
+      1250
+      1500
+      1100
+add yourself
+
+
+
+
+SQL> Select abcno, ename, job, sal, (sal+1000)-4500 from abc;
+
+     ABCNO ENAME      JOB              SAL (SAL+1000)-4500
+---------- ---------- --------- ---------- ---------------
+      7698 BLAKE      MANAGER         2850            -650
+      7782 CLARK      MANAGER         2450           -1050
+      7566 JONES      MANAGER         2975            -525
+      7788 SCOTT      ANALYST         3000            -500
+      7902 FORD       ANALYST         3000            -500
+      7369 SMITH      CLERK            800           -2700
+      7499 ALLEN      SALESMAN        1600           -1900
+      7521 WARD       SALESMAN        1250           -2250
+      7654 MARTIN     SALESMAN        1250           -2250
+      7844 TURNER     SALESMAN        1500           -2000
+      7876 ADAMS      CLERK           1100           -2400
+      
+      edit yourself
