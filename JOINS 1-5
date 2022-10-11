@@ -1,0 +1,198 @@
+SQL> select * from abc order by hiredate desc;
+
+     ABCNO ENAME      JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      7876 ADAMS      CLERK           7788 23-MAY-87       1100
+        20
+
+      7876 ADAMS      CLERK           7788 23-MAY-87       1100
+        20
+
+      7876 ADAMS      CLERK           7788 23-MAY-87       1100
+        20
+
+
+     ABCNO ENAME      JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      7876 ADAMS      CLERK           7788 23-MAY-87       1100
+        20
+
+      7876 ADAMS      CLERK           7788 23-MAY-87       1100
+        20
+
+      7788 SCOTT      ANALYST         7566 19-APR-87       3000
+      
+      
+      EDIT
+      
+      
+      
+      
+      
+      
+      
+      
+      select * from abc order by hiredate asc;
+      SQL> select * from abc order by hiredate asc;
+
+     ABCNO ENAME      JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      7369 SMITH      CLERK           7902 17-DEC-80        800
+        20
+
+      7369 SMITH      CLERK           7902 17-DEC-80        800
+        20
+
+      7369 SMITH      CLERK           7902 17-DEC-80        800
+        20
+
+
+     ABCNO ENAME      JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      7369 SMITH      CLERK           7902 17-DEC-80        800
+        20
+
+      7369 SMITH      CLERK           7902 17-DEC-80        800
+        20
+
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300
+        30
+
+
+     ABCNO ENAME      JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300
+        30
+
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300
+        30
+
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300
+        30
+
+
+     ABCNO ENAME      JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300
+        30
+        
+        
+        EDIT
+        
+        
+        
+        
+        
+        
+        
+SQL> select deptno, dname from dept where deptno>20;
+
+    DEPTNO DNAME
+---------- --------------
+        30 SALES
+        40 OPERATIONS
+        
+        
+        
+        
+        
+        
+        
+        
+        SQL> select deptno, dname from dept where deptno>20;
+
+    DEPTNO DNAME
+---------- --------------
+        30 SALES
+        40 OPERATIONS
+
+SQL> select * from abc where comm>sal;
+
+     ABCNO ENAME      JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      7654 MARTIN     SALESMAN        7698 28-SEP-81       1250       1400
+        30
+
+      7654 MARS       SALESMAN        7695 27-SEP-81       1350       1500
+        30
+
+      7654 MARTIN     SALESMAN        7698 28-SEP-81       1250       1400
+        30
+
+
+     ABCNO ENAME      JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      7654 MARS       SALESMAN        7695 27-SEP-81       1350       1500
+        30
+
+      7654 MARTIN     SALESMAN        7698 28-SEP-81       1250       1400
+        30
+
+      7654 MARS       SALESMAN        7695 27-SEP-81       1350       1500
+        30
+
+
+     ABCNO ENAME      JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      7654 MARTIN     SALESMAN        7698 28-SEP-81       1250       1400
+        30
+
+      7654 MARS       SALESMAN        7695 27-SEP-81       1350       1500
+        30
+
+      7654 MARTIN     SALESMAN        7698 28-SEP-81       1250       1400
+        30
+
+EDIT
+
+
+
+
+
+
+
+
+
+
+
+QL> select * from abc where comm<sal;
+
+    ABCNO ENAME      JOB              MGR HIREDATE         SAL       COMM
+--------- ---------- --------- ---------- --------- ---------- ----------
+   DEPTNO
+---------
+     7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300
+       30
+
+     7521 WARD       SALESMAN        7698 22-FEB-81       1250        500
+       30
+
+     7844 TURNER     SALESMAN        7698 08-SEP-81       1500          0
+       30
+       
+      EDIT
+      
+      
+      
+      
+      
+      
+      
