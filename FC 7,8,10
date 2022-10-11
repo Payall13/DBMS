@@ -1,0 +1,69 @@
+SQL> Select abcno, ename, sal, ((sal+500)-300)/100 from abc;
+
+     ABCNO ENAME             SAL ((SAL+500)-300)/100
+---------- ---------- ---------- -------------------
+      7698 BLAKE            2850                30.5
+      7782 CLARK            2450                26.5
+      7566 JONES            2975               31.75
+      7788 SCOTT            3000                  32
+      7902 FORD             3000                  32
+      7369 SMITH             800                  10
+      7499 ALLEN            1600                  18
+      7521 WARD             1250                14.5
+      7654 MARTIN           1250                14.5
+      7844 TURNER           1500                  17
+      7876 ADAMS            1100                  13
+      
+      edit yourself
+      
+      
+      
+      
+      
+      SQL> Select abcno, ename, sal, (sal*5)/100 from abc;
+
+     ABCNO ENAME             SAL (SAL*5)/100
+---------- ---------- ---------- -----------
+      7698 BLAKE            2850       142.5
+      7782 CLARK            2450       122.5
+      7566 JONES            2975      148.75
+      7788 SCOTT            3000         150
+      7902 FORD             3000         150
+      7369 SMITH             800          40
+      7499 ALLEN            1600          80
+      7521 WARD             1250        62.5
+      7654 MARTIN           1250        62.5
+      7844 TURNER           1500          75
+      7876 ADAMS            1100          55
+      
+      edit yourself
+      
+      
+      
+      
+      
+      SQL> Select abcno, ename, sal, (sal*2) from abc;
+
+     ABCNO ENAME             SAL    (SAL*2)
+---------- ---------- ---------- ----------
+      7698 BLAKE            2850       5700
+      7782 CLARK            2450       4900
+      7566 JONES            2975       5950
+      7788 SCOTT            3000       6000
+      7902 FORD             3000       6000
+      7369 SMITH             800       1600
+      7499 ALLEN            1600       3200
+      7521 WARD             1250       2500
+      7654 MARTIN           1250       2500
+      7844 TURNER           1500       3000
+      7876 ADAMS            1100       2200
+      
+      edit yourself
+      
+      
+      
+      
+      
+      
+      
+      
