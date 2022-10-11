@@ -1,0 +1,76 @@
+SQL> select job, avg(sal) from abc group by job;
+
+JOB         AVG(SAL)
+--------- ----------
+CLERK         1037.5
+SALESMAN  1412.06897
+PRESIDENT       5000
+MANAGER   2758.33333
+ANALYST         3000
+
+
+
+
+
+
+
+SQL> select job, avg(sal) from abc group by job having job not
+  2  in('Manager');
+
+JOB         AVG(SAL)
+--------- ----------
+CLERK         1037.5
+SALESMAN  1412.06897
+PRESIDENT       5000
+MANAGER   2758.33333
+ANALYST         3000
+
+SQL> COMMIT;
+
+Commit complete.
+
+
+
+
+
+
+
+
+SQL> select job,avg(sal),deptno from abc group by job,deptno;
+
+JOB         AVG(SAL)     DEPTNO
+--------- ---------- ----------
+MANAGER         2975         20
+CLERK           1300         10
+PRESIDENT       5000         10
+SALESMAN  1412.06897         30
+ANALYST         3000         20
+MANAGER         2850         30
+MANAGER         2450         10
+CLERK            950         30
+CLERK            950         20
+
+9 rows selected.
+
+SQL> COMMIT;
+
+Commit complete.
+
+
+
+
+
+
+
+
+SQL> select deptno,avg(sal),deptno from abc group by deptno;
+
+    DEPTNO   AVG(SAL)     DEPTNO
+---------- ---------- ----------
+        30 1537.17949         30
+        20       2175         20
+        10 2767.85714         10
+
+SQL> COMMIT;
+
+Commit complete.
