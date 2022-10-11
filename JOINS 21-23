@@ -1,0 +1,84 @@
+SQL> select job,sum(sal),avg(sal) from abc group by job having job
+  2  not in('Salesman','Clerk','Manager');
+
+JOB         SUM(SAL)   AVG(SAL)
+--------- ---------- ----------
+CLERK          20750     1037.5
+SALESMAN       40950 1412.06897
+PRESIDENT      20000       5000
+MANAGER        41375 2758.33333
+ANALYST        30000       3000
+
+SQL> COMMIT;
+
+Commit complete.
+
+
+
+
+
+
+
+SQL> select loc from abc e , dept d where e.ename = 'SMITH' and
+  2  e.deptno = d.deptno ;
+
+LOC
+-------------
+DALLAS
+DALLAS
+DALLAS
+DALLAS
+DALLAS
+
+SQL> COMMIT;
+
+Commit complete.
+
+SQL> 
+
+
+
+
+
+
+
+SQL> select * from abc e ,dept d where d.dname in
+  2  ('ACCOUNTING','RESEARCH') and e.deptno = d.deptno order by
+  3  e.deptno asc;
+
+     ABCNO ENAME      JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO     DEPTNO DNAME          LOC
+---------- ---------- -------------- -------------
+      7839 KING       PRESIDENT            17-NOV-81       5000
+        10         10 ACCOUNTING     NEW YORK
+
+      7934 MILLER     CLERK           7782 23-JAN-82       1300
+        10         10 ACCOUNTING     NEW YORK
+
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450
+        10         10 ACCOUNTING     NEW YORK
+      
+      
+      
+      EDIT
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+
+
+
+
+
+
+
+
+
