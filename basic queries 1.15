@@ -1,0 +1,8 @@
+SQL> Select loc from dept;
+
+LOC
+-------------
+NEW YORK
+DALLAS
+CHICAGO
+BOSTON
