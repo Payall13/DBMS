@@ -1,0 +1,5 @@
+SQL> create table dep(
+  2  deptno number(2,0),
+  3  dname varchar2(14),
+  4  loc varchar2(13)
+  5  );
