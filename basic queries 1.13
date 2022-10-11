@@ -1,0 +1,15 @@
+SQL> Select deptno, ename, sal, job from abc;
+
+    DEPTNO ENAME             SAL JOB
+---------- ---------- ---------- ---------
+        30 BLAKE            2850 MANAGER
+        10 CLARK            2450 MANAGER
+        20 JONES            2975 MANAGER
+        20 SCOTT            3000 ANALYST
+        20 FORD             3000 ANALYST
+        20 SMITH             800 CLERK
+        30 ALLEN            1600 SALESMAN
+        30 WARD             1250 SALESMAN
+        30 MARTIN           1250 SALESMAN
+        30 TURNER           1500 SALESMAN
+        20 ADAMS            1100 CLERK
