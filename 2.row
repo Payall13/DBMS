@@ -1,0 +1,15 @@
+SQL> insert into dep (deptno,dname,loc) values(10, 'ACCOUNTING', 'NEW YORK');
+
+1 row created.
+
+SQL> insert into dep values(20, 'RESEARCH', 'DALLAS');
+
+1 row created.
+
+SQL> insert into dep values(30, 'SALES', 'CHICAGO');
+
+1 row created.
+
+SQL> insert into dep values(40, 'OPERATIONS', 'BOSTON');
+
+1 row created.
