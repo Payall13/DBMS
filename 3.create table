@@ -1,0 +1,12 @@
+SQL> create table abc(
+  2  abcno  number(4,0),
+  3  ename  varchar2(10),
+  4  job  varchar2(9),
+  5  mgr  number(5,0),
+  6  hiredate  date,
+  7  sal  number(9,2),
+  8  comm  number(9,2),
+  9  deptno  number(2,0)
+ 10  );
+
+Table created.
