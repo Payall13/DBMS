@@ -1,0 +1,104 @@
+SQL> select * from emp where job in('MANAGER','SALESMAN') and
+  2  sal>1500;
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300
+        30
+
+      7566 JONES      MANAGER         7839 02-APR-81       2975
+        20
+
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850
+        30
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450
+        10
+
+
+SQL> COMMIT;
+
+Commit complete.
+
+SQL> select job, avg(sal) from emp group by job;
+
+JOB         AVG(SAL)
+--------- ----------
+CLERK         1037.5
+SALESMAN        1400
+PRESIDENT       5000
+MANAGER   2758.33333
+ANALYST         3000
+
+SQL> COMMIT;
+
+Commit complete.
+
+SQL> select job, avg(sal) from emp group by job having job not
+  2  in('Manager');
+
+JOB         AVG(SAL)
+--------- ----------
+CLERK         1037.5
+SALESMAN        1400
+PRESIDENT       5000
+MANAGER   2758.33333
+ANALYST         3000
+
+SQL> COMMIT;
+
+Commit complete.
+
+SQL> select job,avg(sal),deptno from emp group by job,deptno;
+
+JOB         AVG(SAL)     DEPTNO
+--------- ---------- ----------
+MANAGER         2975         20
+PRESIDENT       5000         10
+CLERK           1300         10
+SALESMAN        1400         30
+ANALYST         3000         20
+MANAGER         2850         30
+MANAGER         2450         10
+CLERK            950         30
+CLERK            950         20
+
+9 rows selected.
+
+SQL> COMMIT;
+
+Commit complete.
+
+SQL> select deptno,avg(sal),deptno from emp group by deptno;
+
+    DEPTNO   AVG(SAL)     DEPTNO
+---------- ---------- ----------
+        30 1566.66667         30
+        20       2175         20
+        10 2916.66667         10
+
+SQL> COMMIT;
+
+Commit complete.
+
+SQL> select job,sum(sal),avg(sal) from emp group by job having job
+  2  not in('Salesman','Clerk','Manager');
+
+JOB         SUM(SAL)   AVG(SAL)
+--------- ---------- ----------
+CLERK           4150     1037.5
+SALESMAN        5600       1400
+PRESIDENT       5000       5000
+MANAGER         8275 2758.33333
+ANALYST         6000       3000
+
+SQL> COMMIT;
+
+Commit complete.
