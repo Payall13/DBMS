@@ -1,0 +1,98 @@
+SQL> select distinct deptno, job from xyz;
+
+    DEPTNO JOB
+---------- ---------
+        20 MANAGER
+        20 CLERK
+        30 SALESMAN
+        30 CLERK
+        10 PRESIDENT
+        30 MANAGER
+        10 CLERK
+        10 MANAGER
+        20 ANALYST
+
+9 rows selected.
+
+SQL> commit;
+
+Commit complete.
+
+SQL> select * from xyz where comm is null and job='Manager';
+
+no rows selected
+
+SQL> select * from xyz where comm is null and job='MANAGER';
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850
+        30
+
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450
+        10
+
+      7566 JONES      MANAGER         7839 02-APR-81       2975
+        20
+
+
+SQL> COMMIT;
+
+Commit complete.
+
+SQL> select * from xyz where comm is not null;
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300
+        30
+
+      7521 WARD       SALESMAN        7698 22-FEB-81       1250        500
+        30
+
+      7654 MARTIN     SALESMAN        7698 28-SEP-81       1250       1400
+        30
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      7844 TURNER     SALESMAN        7698 08-SEP-81       1500          0
+        30
+
+
+SQL> COMMIT;
+
+Commit complete.
+
+SQL> select distinct job from xyz;
+
+JOB
+---------
+CLERK
+SALESMAN
+PRESIDENT
+MANAGER
+ANALYST
+
+SQL> COMMIT;
+
+Commit complete.
+
+SQL> select count(distinct job) from xyz;
+
+COUNT(DISTINCTJOB)
+------------------
+                 5
+
+SQL> 
+SQL> COMMIT;
+
+Commit complete.
+
+SQL> 
