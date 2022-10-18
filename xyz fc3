@@ -1,0 +1,31 @@
+SQL> Select ename
+  2  "employee name", job "designition" from xyz;
+
+employee n designiti
+---------- ---------
+KING       PRESIDENT
+BLAKE      MANAGER
+CLARK      MANAGER
+JONES      MANAGER
+SCOTT      ANALYST
+FORD       ANALYST
+SMITH      CLERK
+ALLEN      SALESMAN
+WARD       SALESMAN
+MARTIN     SALESMAN
+TURNER     SALESMAN
+
+employee n designiti
+---------- ---------
+ADAMS      CLERK
+JAMES      CLERK
+MILLER     CLERK
+BRUNO      CLERK
+
+15 rows selected.
+
+SQL> commit;
+
+Commit complete.
+
+SQL> 
