@@ -1,0 +1,95 @@
+SQL> Select empno, ename, sal, (sal*2) from xyz;
+
+     EMPNO ENAME             SAL    (SAL*2)
+---------- ---------- ---------- ----------
+      7839 KING             5000      10000
+      7698 BLAKE            2850       5700
+      7782 CLARK            2450       4900
+      7566 JONES            2975       5950
+      7788 SCOTT            3000       6000
+      7902 FORD             3000       6000
+      7369 SMITH             800       1600
+      7499 ALLEN            1600       3200
+      7521 WARD             1250       2500
+      7654 MARTIN           1250       2500
+      7844 TURNER           1500       3000
+
+     EMPNO ENAME             SAL    (SAL*2)
+---------- ---------- ---------- ----------
+      7876 ADAMS            1100       2200
+      7900 JAMES             950       1900
+      7934 MILLER           1300       2600
+      7934 BRUNO            1300       2600
+
+15 rows selected.
+
+SQL> commit;
+
+Commit complete.
+
+SQL> Select empno, ename, sal, (sal/30) from xyz;
+
+     EMPNO ENAME             SAL   (SAL/30)
+---------- ---------- ---------- ----------
+      7839 KING             5000 166.666667
+      7698 BLAKE            2850         95
+      7782 CLARK            2450 81.6666667
+      7566 JONES            2975 99.1666667
+      7788 SCOTT            3000        100
+      7902 FORD             3000        100
+      7369 SMITH             800 26.6666667
+      7499 ALLEN            1600 53.3333333
+      7521 WARD             1250 41.6666667
+      7654 MARTIN           1250 41.6666667
+      7844 TURNER           1500         50
+
+     EMPNO ENAME             SAL   (SAL/30)
+---------- ---------- ---------- ----------
+      7876 ADAMS            1100 36.6666667
+      7900 JAMES             950 31.6666667
+      7934 MILLER           1300 43.3333333
+      7934 BRUNO            1300 43.3333333
+
+15 rows selected.
+
+SQL> commit;
+
+Commit complete.
+
+SQL> Select empno, ename, sal, (sal*12) “ANNSAL” from 
+Select empno, ename, sal, (sal*12) “ANNSAL” from xyz
+                                   *
+ERROR at line 1:
+ORA-00911: invalid character
+
+
+SQL> Select empno, ename, sal, (sal*12) "ANNSAL" from 
+
+     EMPNO ENAME             SAL     ANNSAL
+---------- ---------- ---------- ----------
+      7839 KING             5000      60000
+      7698 BLAKE            2850      34200
+      7782 CLARK            2450      29400
+      7566 JONES            2975      35700
+      7788 SCOTT            3000      36000
+      7902 FORD             3000      36000
+      7369 SMITH             800       9600
+      7499 ALLEN            1600      19200
+      7521 WARD             1250      15000
+      7654 MARTIN           1250      15000
+      7844 TURNER           1500      18000
+
+     EMPNO ENAME             SAL     ANNSAL
+---------- ---------- ---------- ----------
+      7876 ADAMS            1100      13200
+      7900 JAMES             950      11400
+      7934 MILLER           1300      15600
+      7934 BRUNO            1300      15600
+
+15 rows selected.
+
+SQL> commit;
+
+Commit complete.
+
+SQL> 
