@@ -1,0 +1,57 @@
+SQL> Select ename "Malay" from xyz;
+
+Malay
+----------
+KING
+BLAKE
+CLARK
+JONES
+SCOTT
+FORD
+SMITH
+ALLEN
+WARD
+MARTIN
+TURNER
+
+Malay
+----------
+ADAMS
+JAMES
+MILLER
+BRUNO
+
+15 rows selected.
+
+SQL> COMMIT;
+
+Commit complete.
+
+SQL> Select sal "SALARIES" from xyz;
+
+  SALARIES
+----------
+      5000
+      2850
+      2450
+      2975
+      3000
+      3000
+       800
+      1600
+      1250
+      1250
+      1500
+
+  SALARIES
+----------
+      1100
+       950
+      1300
+      1300
+
+15 rows selected.
+
+SQL> COMMIT;
+
+Commit complete.
