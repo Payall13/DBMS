@@ -1,0 +1,275 @@
+SQL> Select * from xyz where job='MANAGER';
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850
+        30
+
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450
+        10
+
+      7566 JONES      MANAGER         7839 02-APR-81       2975
+        20
+
+
+SQL> commit;
+
+Commit complete.
+
+SQL> Select * from xyz where job='PRESIDENT';
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      7839 KING       PRESIDENT            17-NOV-81       5000
+        10
+
+
+SQL> commit;
+
+Commit complete.
+
+SQL> Select * from xyz where job='MANAGER'or job='CLERK';
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850
+        30
+
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450
+        10
+
+      7566 JONES      MANAGER         7839 02-APR-81       2975
+        20
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      7369 SMITH      CLERK           7902 17-DEC-80        800
+        20
+
+      7876 ADAMS      CLERK           7788 23-MAY-87       1100
+        20
+
+      7900 JAMES      CLERK           7698 03-DEC-81        950
+        30
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      7934 MILLER     CLERK           7782 23-JAN-82       1300
+        10
+
+      7934 BRUNO      CLERK           7780 25-JAN-82       1300
+        10
+
+
+8 rows selected.
+
+SQL> commit;
+
+Commit complete.
+
+SQL> Select * from xyz where job='Manager' and deptno=10;
+
+no rows selected
+
+SQL> Select * from xyz where job='MANAGER' and DEPTNO=10;
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450
+        10
+
+
+SQL> COMMIT;
+
+Commit complete.
+
+SQL> Select * from xyz where deptno=10;
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      7839 KING       PRESIDENT            17-NOV-81       5000
+        10
+
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450
+        10
+
+      7934 MILLER     CLERK           7782 23-JAN-82       1300
+        10
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      7934 BRUNO      CLERK           7780 25-JAN-82       1300
+        10
+
+
+SQL> COMMIT;
+
+Commit complete.
+
+SQL> Select * from xyz where deptno in(20,30,40) and job not
+  2  in('MANAGER');
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      7788 SCOTT      ANALYST         7566 19-APR-87       3000
+        20
+
+      7902 FORD       ANALYST         7566 03-DEC-81       3000
+        20
+
+      7369 SMITH      CLERK           7902 17-DEC-80        800
+        20
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      7499 ALLEN      SALESMAN        7698 20-FEB-81       1600        300
+        30
+
+      7521 WARD       SALESMAN        7698 22-FEB-81       1250        500
+        30
+
+      7654 MARTIN     SALESMAN        7698 28-SEP-81       1250       1400
+        30
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      7844 TURNER     SALESMAN        7698 08-SEP-81       1500          0
+        30
+
+      7876 ADAMS      CLERK           7788 23-MAY-87       1100
+        20
+
+      7900 JAMES      CLERK           7698 03-DEC-81        950
+        30
+
+
+9 rows selected.
+
+SQL> COMMIT;
+
+Commit complete.
+
+SQL> select * from xyz where (job='Manager' and deptno=10) or
+  2  job='Analyst';
+
+no rows selected
+
+SQL> select * from xyz where (job='MANAGER' and deptno=10) or
+  2  job='ANALYST';
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450
+        10
+
+      7788 SCOTT      ANALYST         7566 19-APR-87       3000
+        20
+
+      7902 FORD       ANALYST         7566 03-DEC-81       3000
+        20
+
+
+SQL> COMMIT;
+
+Commit complete.
+
+SQL> Select * from xyz where job not in('PRESIDENT' ,'ANALYST',
+  2  'SALESMAN');
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      7698 BLAKE      MANAGER         7839 01-MAY-81       2850
+        30
+
+      7782 CLARK      MANAGER         7839 09-JUN-81       2450
+        10
+
+      7566 JONES      MANAGER         7839 02-APR-81       2975
+        20
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      7369 SMITH      CLERK           7902 17-DEC-80        800
+        20
+
+      7876 ADAMS      CLERK           7788 23-MAY-87       1100
+        20
+
+      7900 JAMES      CLERK           7698 03-DEC-81        950
+        30
+
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      7934 MILLER     CLERK           7782 23-JAN-82       1300
+        10
+
+      7934 BRUNO      CLERK           7780 25-JAN-82       1300
+        10
+
+
+8 rows selected.
+
+SQL> COMMIT;
+
+Commit complete.
+
+SQL> Select * from xyz where job='Clerk' and deptno=10;
+
+no rows selected
+
+SQL> 
+SQL> Select * from xyz where job='CLERK' and DEPTNO=10;
+
+     EMPNO ENAME      JOB              MGR HIREDATE         SAL       COMM
+---------- ---------- --------- ---------- --------- ---------- ----------
+    DEPTNO
+----------
+      7934 MILLER     CLERK           7782 23-JAN-82       1300
+        10
+
+      7934 BRUNO      CLERK           7780 25-JAN-82       1300
+        10
+
+
+SQL> COMMIT;
+
+Commit complete.
+
+SQL> 
